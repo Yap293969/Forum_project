@@ -7,7 +7,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+<body>
 <div class="container">
     <div class="row">
     	<div class="col-md-4 col-md-offset-4">
@@ -41,3 +41,34 @@
 		</div>
 	</div>
 </div>
+
+<script>
+    // JavaScript for the login page (login.js)
+class AuthManager {
+    constructor() {
+        this.users = [
+            { username: 'user1', password: 'pass1' },
+            { username: 'user2', password: 'pass2' },
+            // Add more users as needed
+        ];
+    }
+
+    login(username, password) {
+        const user = this.users.find(u => u.username === username && u.password === password);
+        if (user) {
+            alert('Login successful!');
+        } else {
+            alert('Invalid username or password');
+        }
+    }
+}
+
+function login() {
+    const username = document.getElementById('loginForm').elements.username.value;
+    const password = document.getElementById('loginForm').elements.password.value;
+
+    const authManager = new AuthManager();
+    authManager.login(username, password);
+}
+</script>
+</body>
