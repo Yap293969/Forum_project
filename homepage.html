@@ -120,9 +120,14 @@ body {
             <div id="search-container" style="margin-left: 120px;">
                 <input type="text" id="search-input" placeholder="Enter your search">
                 <button id="search-button" onclick="performSearch()">Search</button>
+                <button id="login-button" class="btn btn-primary" onclick="openLoginForm()" style = "margin-left: 200px;">Login</button>
             </div>
         
             <script>
+               function openLoginForm() {
+                // Redirect to the existing login page
+                window.location.href = 'log_in.html';
+            }
                 function performSearch() {
                     // Get the search query from the input field
                     var searchQuery = document.getElementById('search-input').value;
