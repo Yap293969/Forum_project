@@ -1,4 +1,4 @@
-<head>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -8,7 +8,6 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
 <!------ Include the above in your HEAD tag ---------->
 
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
@@ -70,6 +69,9 @@ body {
             background-color: lightblue;
         }
 
+       
+
+
 
 @media (min-width: 992px) {
     .gedf-main {
@@ -79,9 +81,13 @@ body {
     .gedf-card {
         margin-bottom: 2.77rem;
     }
-    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+}
+
+ /* Footer */
+ @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
     padding: 60px 0;
+    width:100%;
 }
 
 section .section-title {
@@ -91,8 +97,7 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-    background: #007b5e !important;
-    width:100%;
+    background: #007b5e;
 }
 #footer h5{
 	padding-left: 10px;
@@ -154,11 +159,9 @@ section .section-title {
     margin-bottom: 10px;
 }
 }
-}
 
 
         </style>
-<body>
 <nav class="navbar navbar light-blue" >
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px;">
         <div class="container-fluid">
@@ -188,8 +191,8 @@ section .section-title {
                 </div>
             </li>
             <li class="nav-item" style="margin: 5px;">
-                <a id="careers-link" class="nav-link" href="#">Careers</a>
-            </li>
+                <a class="nav-link" href="#">Careers</a>
+              </li>
               <i class="material-icons" style="font-size:40px;color:blue; margin-left: 120px;" onclick="performadd()">add</i>
 
             </ul>
@@ -197,24 +200,9 @@ section .section-title {
             <div id="search-container" style="margin-left: 120px;">
                 <input type="text" id="search-input" placeholder="Enter your search">
                 <button id="search-button" onclick="performSearch()">Search</button>
-                <button id="login-button" class="btn btn-primary" onclick="openLoginForm()" style = "margin-left: 200px;">Login</button>
             </div>
         
             <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get the "Careers" link by its id
-        var careersLink = document.getElementById("careers-link");
-
-        // Add a click event listener to the "Careers" link
-        careersLink.addEventListener("click", function () {
-            // Redirect to the "careers.html" page
-            window.location.href = 'careers.html';
-        });
-    });
-               function openLoginForm() {
-                // Redirect to the existing login page
-                window.location.href = 'log_in.html';
-            }
                 function performSearch() {
                     // Get the search query from the input field
                     var searchQuery = document.getElementById('search-input').value;
@@ -493,62 +481,67 @@ section .section-title {
                         </div>
                     </div>
             </div>
-            <section id="footer">
-                <div class="container">
-                    <div class="row text-center text-xs-center text-sm-left text-md-left">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
-                            <ul class="list-unstyled quick-links">
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                            </ul>
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!------ Include the above in your HEAD tag ---------->
+            
+            <!-- Footer -->
+                <section id="footer">
+                    <div class="container">
+                        <div class="row text-center text-xs-center text-sm-left text-md-left">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <h5>Quick links</h5>
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <h5>Quick links</h5>
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <h5>Quick links</h5>
+                                <ul class="list-unstyled quick-links">
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
-                            <ul class="list-unstyled quick-links">
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <h5>Quick links</h5>
-                            <ul class="list-unstyled quick-links">
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
-                            </ul>
-                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                                <ul class="list-unstyled list-inline social text-center">
+                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                        </div>	
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                                <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                                <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+                            </div>
+                            <hr>
+                        </div>	
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                            <ul class="list-unstyled list-inline social text-center">
-                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                        <hr>
-                    </div>	
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                            <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-                            <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
-                        </div>
-                        <hr>
-                    </div>	
-                </div>
-            </section>
+                </section>
+                <!-- ./Footer -->
         </div>
     </div>
-</body>
-</html>
