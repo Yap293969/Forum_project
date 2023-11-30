@@ -111,8 +111,8 @@ body {
                 </div>
             </li>
             <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Careers</a>
-              </li>
+                <a id="careers-link" class="nav-link" href="#">Careers</a>
+            </li>
               <i class="material-icons" style="font-size:40px;color:blue; margin-left: 120px;" onclick="performadd()">add</i>
 
             </ul>
@@ -124,6 +124,16 @@ body {
             </div>
         
             <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the "Careers" link by its id
+        var careersLink = document.getElementById("careers-link");
+
+        // Add a click event listener to the "Careers" link
+        careersLink.addEventListener("click", function () {
+            // Redirect to the "careers.html" page
+            window.location.href = 'careers.html';
+        });
+    });
                function openLoginForm() {
                 // Redirect to the existing login page
                 window.location.href = 'log_in.html';
