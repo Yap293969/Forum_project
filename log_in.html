@@ -8,6 +8,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <body>
+    <button type = "button" id = "backButton">Back</button>
     <div class="container" id="wrap">
     <div class="row">
     	<div class="col-md-4 col-md-offset-4">
@@ -43,6 +44,10 @@
 	</div>
 </div>
 <script>
+document.getElementById('backButton').addEventListener('click', function () {
+            // Redirect to homepage.html
+            window.location.href = 'homepage.html';
+        });
 class AuthManager {
     // For simplicity, assume any input is valid for login
     login() {
