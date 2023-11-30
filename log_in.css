@@ -1,0 +1,93 @@
+/* Shared Styles */
+.white {
+    color: #000;
+    background-color: #fff;
+}
+
+.btn-facebook {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2b4b90;
+    background-image: linear-gradient(to bottom, #3b5998, #133783);
+    border: 1px solid black;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.btn-facebook.disabled,
+.btn-facebook[disabled] {
+    color: #ffffff;
+    background-color: #133783 !important;
+}
+
+.btn-facebook:active,
+.btn-facebook.active {
+    background-color: #0d2456 \9 !important;
+}
+
+/* Sign Up Page Specific Styles */
+#wrap-signup {
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #D3D8E8 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.signup-legend {
+    color: #141823;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background: #79bc64;
+    background-image: linear-gradient(to bottom, #79bc64, #578843);
+    /* ... rest of your styles ... */
+}
+
+.signup-btn:hover {
+    background: #79bc64;
+    background-image: linear-gradient(to bottom, #79bc64, #5e7056);
+    /* ... rest of your styles ... */
+}
+
+/* Login Page Specific Styles */
+#wrap-login {
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #D3D8E8 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-legend {
+    color: #141823;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-btn-google {
+    background: #fff !important; /* Ensure the background is white */
+    color: #000 !important;     /* Ensure the text color is black */
+    border: 1px solid #000;      /* Ensure the border color is black */
+}
+
+.login-btn-google:hover,
+.login-btn-google:focus,
+.login-btn-google:active,
+.login-btn-google.active,
+.login-btn-google.disabled,
+.login-btn-google[disabled] {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.login-btn-apple {
+    background: #fff !important; /* Set the background color for Apple button to white */
+    color: #000 !important;     /* Set the text color for Apple button to black */
+    border: 1px solid #000;      /* Set the border color for Apple button to black */
+}
+
+.login-btn-apple:active,
+.login-btn-apple.active {
+    background-color: #fff !important;
+}
