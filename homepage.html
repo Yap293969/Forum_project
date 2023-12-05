@@ -25,7 +25,7 @@
         <style>
             
 body {
-    background-color: lightblue;
+    background-color:lightblue;
 }
 
 .h7 {
@@ -92,12 +92,12 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #007b5e;
+    color: blue;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 #footer {
-    background: #007b5e;
+    background: blue;
 }
 #footer h5{
 	padding-left: 10px;
@@ -162,55 +162,56 @@ section .section-title {
 
 
         </style>
-<nav class="navbar navbar light-blue" >
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Bluedit</a>
+<nav class="navbar navbar light-blue" style="background-color: #3498db;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px; background-color:#3498db; align-items: center;" >
+        <div class="container-fluid" style="margin-left: 200px;">
+          <a class="navbar-brand" href="#" style="color: lightblue;">Bluedit</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent" style= margin:10px; >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0"  style="text-align: center;">
               <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
               </li>
               <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Popular</a>
+                <a class="nav-link" href="#" style="color: #fff;">Popular</a>
               </li>
               <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#" style="color: #fff;">Blog</a>
               </li>
               <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Advertise</a>
+                <a class="nav-link" href="#" style="color: #fff;">Advertise</a>
               </li>
               <li class="dropdown" style="padding: 8px; margin: 5px;">
-                <a href="#" class="dropbtn">About</a>
+                <a href="#" class="dropbtn" style="color: #fff;">About</a>
                 <div class="dropdown-content">
                     <a href="#">About Careers</a>
                     <a href="#">About Forum</a>
                 </div>
             </li>
             <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Careers</a>
+                <a class="nav-link" href="#" style="color: #fff;">Careers</a>
               </li>
-              <i class="material-icons" style="font-size:40px;color:blue; margin-left: 120px;" onclick="performadd()">add</i>
-
-            </ul>
-            
-            <div id="search-container" style="margin-left: 120px;">
-                <input type="text" id="search-input" placeholder="Enter your search">
-                <button id="search-button" onclick="performSearch()">Search</button>
+                 
+            <div id="search-container" style="margin-left: 250px;">
+                
+                    <input type="text" id="search-input" placeholder="Enter your search" style="width: 300px; height: 50px; border-radius: 10px;">
+                    <button id="search-button" onclick="performSearch()" style="background-color: #3498db; border-style: none;"><i class="fa fa-search"></i></button>
+                
             </div>
-        
-            <script>
-                function performSearch() {
-                    // Get the search query from the input field
-                    var searchQuery = document.getElementById('search-input').value;
-        
-                    // Redirect to Google with the search query
-                    window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
-                }
-            </script>
+            
+                <script>
+                    function performSearch() {
+                        // Get the search query from the input field
+                        var searchQuery = document.getElementById('search-input').value;
+            
+                        // Redirect to Google with the search query
+                        window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
+                    }
+                </script>
+            </ul>
+           
                 
           </div>
         </div>
