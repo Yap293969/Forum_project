@@ -21,9 +21,10 @@
 <nav class="navbar navbar-dark bg-primary" style="margin-bottom:10px;">
   
     <a class="navbar-brand" href="#">Bluedit</a>
+    
     <div id="search-container">
                 
-                <input type="text" id="search-input" placeholder="Enter your search" style="width: 300px; height: 40px; border-radius: 10px; text-align: center; margin-left:250px;">
+                <input type="text" id="search-input" placeholder="Enter your search" style="width: 350px; height: 40px; border-radius: 10px; text-align: center; margin-left:900px;">
                 <button id="search-button" onclick="performSearch()" style="background-color: transparent; border-style: none;"><i class="fa fa-search"></i></button>
             
         </div>
