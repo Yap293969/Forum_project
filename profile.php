@@ -19,6 +19,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
           crossorigin="anonymous"></script>
   </head>
+
+  <title>profile</title>
+
   <style>
     
     
@@ -267,9 +270,8 @@ section .section-title {
   }
   </style>
   <body>
-    <?php
-      include 'navbar.php';
-  ?>
+    <?php include 'navbar.php';?>
+
       <div class="container">
         <div class="row">
         <div class="col-md-9">
