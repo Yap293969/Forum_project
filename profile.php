@@ -19,9 +19,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
           crossorigin="anonymous"></script>
   </head>
-
-  <title>profile</title>
-
   <style>
     
     
@@ -270,8 +267,9 @@ section .section-title {
   }
   </style>
   <body>
-    <?php include 'navbar.php';?>
 
+  <?php include 'navbar.php' ?>
+  
       <div class="container">
         <div class="row">
         <div class="col-md-9">
@@ -325,9 +323,14 @@ section .section-title {
                   <label for="fileInput" class="btn btn-info btn-lg">Add Profile Picture</label>
                   <input type="file" id="fileInput" style="opacity: 0; position: absolute; top: 0; left: 0;" accept="image/*" onchange="previewImage(this)">
                 </div>
+                <center>
                 <div>
                   <p>Date account created:</p>
                 </div>
+                <div>
+                  <button type = "button" class = "btn btn-success"  id="addPostBtn">Add new post</button>
+                </div>
+              </center>
                 <!-- END SIDEBAR BUTTONS -->
                 <!-- END MENU -->
               </div>
@@ -409,6 +412,18 @@ section .section-title {
             reader.readAsDataURL(file);
           }
         }
+          document.getElementById('addPostBtn').addEventListener('click', function() {
+          // Navigate to post.html
+          fetch('post.html')
+          .then(response => response.text())
+          .then(html => {
+          // Update the content dynamically
+          document.body.innerHTML = html;
+          // You may want to enhance this by updating specific elements instead of replacing the entire body
+          })
+          .catch(error => console.error('Error fetching post.html:', error));
+  });
+</script>
       </script>
   </body>
 </html>
