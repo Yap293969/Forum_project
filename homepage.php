@@ -10,6 +10,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
         
@@ -19,25 +25,23 @@
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<script src="suggestions.js"></script>
-      
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+        
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="07DquqDk"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="IXaqmzjl"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="9gOKuddq"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0" nonce="A6Wplw0u"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <style>
-            
-body {
-    background-color:lightblue;
-}
-
-.h7 {
-    font-size: 0.8rem;
-}
-
-.gedf-wrapper {
-    margin-top: 0.97rem;
-}
-
-       
-        /* Styles for the dropdown */
+             /* Styles for the dropdown */
         .dropdown {
             display: inline-block;
             align-items: center;
@@ -70,156 +74,80 @@ body {
         }
 
        
-
-
-
-@media (min-width: 992px) {
-    .gedf-main {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    .gedf-card {
-        margin-bottom: 2.77rem;
-    }
+        body {
+    font-family: Arial, sans-serif;
 }
 
- /* Footer */
- @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-section {
-    padding: 60px 0;
-    width:100%;
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-section .section-title {
-    text-align: center;
-    color: blue;
-    margin-bottom: 50px;
-    text-transform: uppercase;
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-#footer {
-    background: blue;
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
-#footer h5{
-	padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
+
+.post {
     margin-bottom: 20px;
-    color:#ffffff;
-}
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-#footer ul.social li{
-	padding: 3px 0;
-}
-#footer ul.social li a i {
-    margin-right: 5px;
-	font-size:25px;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.social li:hover a i {
-	font-size:30px;
-	margin-top:-10px;
-}
-#footer ul.social li a,
-#footer ul.quick-links li a{
-	color:#ffffff;
-}
-#footer ul.social li a:hover{
-	color:#eeeeee;
-}
-#footer ul.quick-links li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.quick-links li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
-}
-#footer ul.quick-links li a i{
-	margin-right: 5px;
-}
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
 }
 
-@media (max-width:767px){
-	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
+.message-box {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
+.message-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
 
         </style>
-<nav class="navbar navbar light-blue" style="background-color: #3498db;">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px; background-color:#3498db; align-items: center;" >
-        <div class="container-fluid" style="margin-left: 200px;">
-          <a class="navbar-brand" href="#" style="color: lightblue;">Bluedit</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" style= margin:10px; >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"  style="text-align: center;">
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#" style="color: #fff;">Popular</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#" style="color: #fff;">Blog</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#" style="color: #fff;">Advertise</a>
-              </li>
-              <li class="dropdown" style="padding: 8px; margin: 5px;">
-                <a href="#" class="dropbtn" style="color: #fff;">About</a>
-                <div class="dropdown-content">
-                    <a href="#">About Careers</a>
-                    <a href="#">About Forum</a>
-                </div>
-            </li>
-            <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#" style="color: #fff;">Careers</a>
-              </li>
-                 
-            <div id="search-container" style="margin-left: 250px;">
-                
-                    <input type="text" id="search-input" placeholder="Enter your search" style="width: 300px; height: 50px; border-radius: 10px;">
-                    <button id="search-button" onclick="performSearch()" style="background-color: #3498db; border-style: none;"><i class="fa fa-search"></i></button>
-                
-            </div>
-            
-                <script>
-                    function performSearch() {
-                        // Get the search query from the input field
-                        var searchQuery = document.getElementById('search-input').value;
-            
-                        // Redirect to Google with the search query
-                        window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
-                    }
-                </script>
-            </ul>
-           
-                
-          </div>
-        </div>
-      </nav>
-    </nav>
-
-
-    <div class="container-fluid gedf-wrapper">
+ <?php
+ include 'navbar.php';
+ ?>
+ <div class="container-fluid gedf-wrapper" style="margin-top:5px;">
         <div class="row">
             <div class="col-md-3">
                 <div class="card">
@@ -243,10 +171,11 @@ section .section-title {
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-6 gedf-main">
 
                 <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
+                <div class="card gedf-card" style="margin-bottom:10px;">
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -279,8 +208,47 @@ section .section-title {
                         </div>
                         <div class="btn-toolbar justify-content-between">
                             <div class="btn-group">
-                                <button type="submit" class="btn btn-primary">share</button>
+                                <button onclick="postFeeling()" type="submit" class="btn btn-primary" href="https://www.facebook.com/20531316728/posts/10154009990506729/">share</button>
+                                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+            <div class="form-group">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Upload image</label>
+                </div>
+            </div>
+        </div>
+             <script>
+                 function postFeeling() {
+                            const text = document.getElementById('message').value;
+                            const image = document.getElementById('customFile').files[0]; // Assuming only one image is uploaded
+
+                            const formData = new FormData();
+                            formData.append('text', text);
+                            if (image) {
+                                formData.append('image', image, image.name);
+                            }
+
+                            fetch('backend_endpoint.php', {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    alert('Feeling posted successfully!');
+                                    // Refresh or update the page as needed
+                                } else {
+                                    alert('Failed to post feeling.');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                        }
+
+                                </script>
                             </div>
+                            <div class="btn-group">
                             <div class="btn-group">
                                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
@@ -290,7 +258,8 @@ section .section-title {
                                     <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
                                     <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
                                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
-                                    <script>
+                                </div>
+                                <script>
                                         function toggleDropdown() {
                                             var dropdownContent = document.getElementById("dropdown-menu");
                                             dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
@@ -308,7 +277,7 @@ section .section-title {
                 <!-- Post /////-->
 
                 <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
+                <div class="card gedf-card" style="margin-bottom:10px; ">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
@@ -348,15 +317,15 @@ section .section-title {
                     </div>
                     <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="#" class="card-link" onclick="openPopup()"><i class="fa fa-comment"></i> Comment</a>
+                        <a href="https://www.facebook.com/login/" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
                     </div>
                 </div>
                 <!-- Post /////-->
 
 
                 <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
+                <div class="card gedf-card" style="margin-bottom:10px;">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
@@ -404,15 +373,40 @@ section .section-title {
                     </div>
                     <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="#" class="card-link" onclick="openPopup()"><i class="fa fa-comment"></i> Comment</a>
+                        <a href="https://www.facebook.com/login/" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+
+                        <!-- Popup Tab -->
+                        <div id="popup" class="popup">
+                            <div class="popup-content" style="width:400px; height: 200px;">
+                                <span class="close-btn" onclick="closePopup()">&times;</span>
+                                <textarea style="width: 250px;" id="userInput" rows="5" placeholder="Share your feeling here!"></textarea>
+                                <button style="background-color:blue; margin-top:20px; width: 250px; cursor:pointer; border-radius:20px;" onclick="submitData()">Submit</button>
+                            </div>
+                        <script>
+                        function openPopup() {
+                            document.getElementById('popup').style.display = 'block';
+                        }
+
+                        function closePopup() {
+                            document.getElementById('popup').style.display = 'none';
+                        }
+
+                        function submitData() {
+                            const userInput = document.getElementById('userInput').value;
+                            // Handle the user input (e.g., send to server, save to local storage, etc.)
+                            console.log("User input:", userInput);
+                            closePopup(); // Close the popup after submission
+                        }
+                        </script>
                     </div>
                 </div>
+                    </div>
                 <!-- Post /////-->
 
 
                 <!--- \\\\\\\Post-->
-                <div class="card gedf-card">
+                <div class="card gedf-card" style="margin-bottom:10px;">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
@@ -431,7 +425,7 @@ section .section-title {
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
                                         <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
+                                        <a class="dropdown-item" class="fb-save"  data-uri="https://www.instagram.com/facebook/">Save</a>
                                         <a class="dropdown-item" href="#">Hide</a>
                                         <a class="dropdown-item" href="#">Report</a>
                                     </div>
@@ -453,8 +447,8 @@ section .section-title {
                     </div>
                     <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="#" class="card-link" onclick="openPopup()"><i class="fa fa-comment"></i> Comment</a>
+                        <a href="https://www.facebook.com/login/" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
                     </div>
                 </div>
                 <!-- Post /////-->
@@ -463,86 +457,46 @@ section .section-title {
 
             </div>
             <div class="col-md-3">
-                <div class="card gedf-card">
+            <div class="card gedf-card" style="margin-bottom:20px; border: 1px solid; padding: 10px; box-shadow: 5px 10px #888888;">
                     <div class="card-body">
-                        <h5 class="card-title">Semenyih Community</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Lets Talks</h6>
-                        <p class="card-text">Everything About Semenyih</p>
+                        <h5 class="card-title">Movies Community</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Lost in Time</h6>
+                        <p class="card-text">In a world where time travel is possible but strictly regulated, Dr. Eleanor Carter, a brilliant physicist, stumbles upon a mysterious artifact that allows her to travel through time.</p>
                         <a href="#" class="card-link">Join Now!</a>
                         <a href="#" class="card-link">See Group Details</a>
                     </div>
                 </div>
-                <div class="card gedf-card">
+                <div class="card gedf-card" style="margin-bottom:20px; border: 1px solid; padding: 10px; box-shadow: 5px 10px #888888;">
                         <div class="card-body">
-                            <h5 class="card-title">LOL Community</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Game Start!</h6>
-                            <p class="card-text">Share some games experience or posting somethings</p>
+                            <h5 class="card-title">Games Community</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Realm of Shadows</h6>
+                            <p class="card-text">Dive into the enchanting world of "Realm of Shadows," a sprawling open-world game where magic and mystery await at every turn.</p>
+                            <a href="#" class="card-link">Join Now!</a>
+                            <a href="#" class="card-link">See Group Details</a>
+                        </div>
+                    </div>
+                    <div class="card gedf-card" style="margin-bottom:20px; border: 1px solid; padding: 10px; box-shadow: 5px 10px #888888;">
+                    <div class="card-body">
+                        <h5 class="card-title">Foods Community</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Mediterranean Grilled Chicken Salad</h6>
+                        <p class="card-text">Indulge in the vibrant flavors of the Mediterranean with our signature Grilled Chicken Salad. Tender, marinated chicken breast, grilled to perfection, serves as the centerpiece of this delightful dish.</p>
+                        <a href="#" class="card-link">Join Now!</a>
+                        <a href="#" class="card-link">See Group Details</a>
+                    </div>
+                </div>
+                <div class="card gedf-card" style="margin-bottom:20px; border: 1px solid; padding: 10px; box-shadow: 5px 10px #888888;">
+                        <div class="card-body">
+                            <h5 class="card-title">Travels Community</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Serenity Cove, Bali</h6>
+                            <p class="card-text">Escape to the tranquil beauty of Serenity Cove, a hidden gem nestled along the pristine shores of Bali. Surrounded by lush tropical gardens and overlooking the azure waters of the Indian Ocean, this secluded retreat offers the ultimate getaway for those seeking relaxation and rejuvenation.</p>
                             <a href="#" class="card-link">Join Now!</a>
                             <a href="#" class="card-link">See Group Details</a>
                         </div>
                     </div>
             </div>
-            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <!------ Include the above in your HEAD tag ---------->
             
-            <!-- Footer -->
-                <section id="footer">
-                    <div class="container">
-                        <div class="row text-center text-xs-center text-sm-left text-md-left">
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <h5>Quick links</h5>
-                                <ul class="list-unstyled quick-links">
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <h5>Quick links</h5>
-                                <ul class="list-unstyled quick-links">
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <h5>Quick links</h5>
-                                <ul class="list-unstyled quick-links">
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                                    <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                                <ul class="list-unstyled list-inline social text-center">
-                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </div>
-                            <hr>
-                        </div>	
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                                <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-                                <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
-                            </div>
-                            <hr>
-                        </div>	
-                    </div>
-                </section>
-                <!-- ./Footer -->
+          <?php
+          include 'footer.php';
+          ?>
         </div>
     </div>
