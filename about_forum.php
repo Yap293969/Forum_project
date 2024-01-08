@@ -1,190 +1,99 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Bluedit</title>
+<link rel="stylesheet" href="styles.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!------ Include the above in your HEAD tag ---------->
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
 <style>
-    body {
-    font-family: 'Roboto';
-    font-size: 16px;
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.aboutus-section {
-    padding: 90px 0;
-}
-.aboutus-title {
-    font-size: 30px;
-    letter-spacing: 0;
-    line-height: 32px;
-    margin: 0 0 39px;
-    padding: 0 0 11px;
-    position: relative;
-    text-transform: uppercase;
-    color: #000;
-}
-.aboutus-title::after {
-    background: #fdb801 none repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 54px;
-}
-.aboutus-text {
-    color: #606060;
-    font-size: 13px;
-    line-height: 22px;
-    margin: 0 0 35px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-a:hover, a:active {
-    color: #ffb901;
-    text-decoration: none;
-    outline: 0;
-}
-.aboutus-more {
-    border: 1px solid #fdb801;
-    border-radius: 25px;
-    color: #fdb801;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0;
-    padding: 7px 20px;
-    text-transform: uppercase;
-}
-.feature .feature-box .iconset {
-    background: #fff none repeat scroll 0 0;
-    float: left;
-    position: relative;
-    width: 18%;
-}
-.feature .feature-box .iconset::after {
-    background: #fdb801 none repeat scroll 0 0;
-    content: "";
-    height: 150%;
-    left: 43%;
-    position: absolute;
-    top: 100%;
-    width: 1px;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.feature .feature-box .feature-content h4 {
-    color: #0f0f0f;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 22px;
-    margin: 0 0 5px;
+.about-section {
+    padding: 50px 0;
 }
 
-
-.feature .feature-box .feature-content {
-    float: left;
-    padding-left: 28px;
-    width: 78%;
-}
-.feature .feature-box .feature-content h4 {
-    color: #0f0f0f;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 22px;
-    margin: 0 0 5px;
-}
-.feature .feature-box .feature-content p {
-    color: #606060;
-    font-size: 13px;
-    line-height: 22px;
-}
-.icon {
-    color : #f4b841;
-    padding:0px;
-    font-size:40px;
-    border: 1px solid #fdb801;
-    border-radius: 100px;
-    color: #fdb801;
-    font-size: 28px;
-    height: 70px;
-    line-height: 70px;
+.section-title {
+    font-size: 20px;
     text-align: center;
-    width: 70px;
+    margin-bottom: 30px;
 }
 
-      @import url('https://fonts.googleapis.com/css?family=Oswald|Raleway');
-        .about-us {
-            background: #f6f7f5;
-        }
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-        .about-content {
-            display: -ms-flexbox;
-            display: flex;
-            flex-direction: row;
-            -ms-flex-direction: row;
-        }
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
 
-        .img-content {
-            width: 50%;
-            font-size: 0;
-            line-height: 0;
-            position: relative;
-            letter-spacing: 0;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-        }
+.description {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+}
 
-        .img-content img {
-            min-width: 100%;
-            min-height: 100%;
-            height: auto;
-            object-fit: cover;
-            width: 100%;
-        }
+/* Responsive adjustments */
 
-        .text-block .title {
-            max-width: 80%;
-            font-family: 'Oswald', sans-serif;
-            font-size: 3rem;
-            color: #3b3b3b;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
 
-        .text-block p {
-            margin-bottom: 40px;
-            font-size: 18px;
-            font-family: 'Raleway', sans-serif;
-        }
+    .logo {
+        max-width: 150px;
+    }
 
-        .text-block {
-            padding: 80px 80px 60px 90px;
-            display: -ms-flexbox;
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            padding: 50px 40px;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -ms-flex-direction: column;
-            -ms-flex-align: start;
-            align-items: flex-start;
-        }
+    .description {
+        font-size: 1rem;
+    }
+}
 
-        @media only screen and (max-width: 767px) {
-            .about-content {
-                flex-direction: column;
-                -ms-flex-direction: column;
-            }
-            .img-content {
-                width: 100%;
-            }
-            .text-block {
-                width: 100%;
-            }
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
 
-        }
+    .logo {
+        max-width: 120px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
         /* FontAwesome for working BootSnippet :> */
 
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
     background: lightblue !important;
 }
@@ -217,6 +126,7 @@ section .section-title {
 #team .card {
     border: none;
     background: #ffffff;
+    border-radius:20px;
 }
 
 .image-flip:hover .backside,
@@ -226,7 +136,7 @@ section .section-title {
     -o-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
-    border-radius: .25rem;
+    border-radius:20px;
 }
 
 .image-flip:hover .frontside,
@@ -235,6 +145,7 @@ section .section-title {
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    border-radius:20px;
 }
 
 .mainflip {
@@ -313,6 +224,8 @@ section .section-title {
     border-radius: 50%;
 }
 
+
+
 #contatti{
   background-color: #70c3be;
   letter-spacing: 2px;
@@ -369,85 +282,29 @@ section .section-title {
     
 }
 
+
 </style>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!------ Include the above in your HEAD tag ---------->
+<body>
 
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-
-<div class="aboutus-section" style="background-color:lightblue;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="aboutus">
-                        <h2 class="aboutus-title">About Us</h2>
-                        <p class="aboutus-text">Welcome to the dawn of a new digital era! We are thrilled to introduce Bluedit, a cutting-edge platform designed to redefine your online experience. With a fresh approach to design, functionality, and user engagement, Bluedit is not just a website; it's a gateway to innovation and connection.</p>
-                        <p class="aboutus-text">As we open the doors to Bluedit, we invite you to join us in this exciting chapter of innovation, connectivity, and discovery. Whether you're a seasoned user or a newcomer, Bluedit promises to be an immersive and rewarding experience for all.</p>
-                        <a class="aboutus-more" href="#">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="aboutus-banner">
-                        <img src="http://themeinnovation.com/demo2/html/build-up/img/home1/about1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-6 col-xs-12">
-                    <div class="feature">
-                        <div class="feature-box">
-                            <div class="clearfix">
-                                <div class="iconset">
-                                    <span class="glyphicon glyphicon-cog icon"></span>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Work with heart</h4>
-                                    <p>Passion-Driven Innovation:
-                                        At the core of our work philosophy is a passion that fuels innovation. Each project is an opportunity to bring fresh ideas to life, to challenge conventions, and to craft solutions that go beyond expectations. Working with heart means infusing creativity into the mundane, turning routine into remarkable.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box">
-                            <div class="clearfix">
-                                <div class="iconset">
-                                    <span class="glyphicon glyphicon-cog icon"></span>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Reliable services</h4>
-                                    <p> Proactive Problem-Solving:
-                                        Challenges are inevitable, but our proactive approach to problem-solving sets us apart. When unexpected issues arise, count on us to address them swiftly and effectively. Our reliability extends to being a solutions-driven partner, ensuring that obstacles don't hinder the seamless delivery of our services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box">
-                            <div class="clearfix">
-                                <div class="iconset">
-                                    <span class="glyphicon glyphicon-cog icon"></span>
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Great support</h4>
-                                    <p> Knowledgeable and Empathetic Team:
-                                        Our support team is not just knowledgeable; they are empathetic listeners. We understand that each interaction is an opportunity to make a positive impact. Whether it's troubleshooting a problem or offering guidance, our team is dedicated to providing solutions with a human touch.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="about-section" style="background-color:lightblue;">
+    <div class="container">
+        <h2 class="section-title">About Bluedit</h2>
+        <div class="content">
+            <img src="bluedit_logo.jpeg" alt="Bluedit Logo" class="logo">
+            <p class="description">
+                Bluedit is a cutting-edge platform designed to revolutionize your online experience. With an innovative approach to user engagement, we aim to connect people, ideas, and cultures seamlessly.
+            </p>
         </div>
     </div>
-
-    
-    <!-- Team -->
-    <section id="team" style="height: 700px;" class="pb-5">
+</section>
+  <!-- Team -->
+  <section id="team"  class="pb-5">
         <div class="container">
             <h5 class="section-title h1">OUR TEAM</h5>
             <div class="row">
                 <!-- Team member -->
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');" style="margin-bottom:90px;">
                         <div class="mainflip">
                             <div class="frontside">
                                 <div class="card">
@@ -562,7 +419,7 @@ section .section-title {
                 <!-- ./Team member -->
                 <!-- Team member -->
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');" style="margin-bottom:70px;">
                         <div class="mainflip">
                             <div class="frontside">
                                 <div class="card">
@@ -619,7 +476,7 @@ section .section-title {
         </div>
     </section>
     <!-- Team -->
-<div class="row" id="contatti" style="background-color:lightblue;">
+    <div class="row" id="contatti" style="background-color:lightblue;">
 <div class="container mt-5" >
 
     <div class="row" style="height:550px;">
@@ -680,19 +537,11 @@ section .section-title {
         </div>
         </div>
       </div>
-
+         </div>
+         </div>
     </div>
-</div>
-</div>
-
-
-</div>
-
 <?php
-include 'footer.php';
+    include 'footer.php';
 ?>
-</div>
-</div>
-
-
-
+</body>
+</html>
