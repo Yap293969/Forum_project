@@ -6,6 +6,14 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("tDa0zOGkgIPRlK8eo");
+   })();
+</script>
     <!------ Include the above in your HEAD tag ---------->
     <title>Our Careers - Join Our Team</title>
     <style>
@@ -18,7 +26,7 @@
         }
 
         header {
-            background-color:  #3498db;
+            background-color:  lightblue;
             color: #fff;
             text-align: center;
             padding: 1em;
@@ -164,24 +172,28 @@ section .section-title {
     border-left: transparent;
     padding-bottom: 0px;
     margin-bottom: 10px;
-}
+
+    }
 }
 
 
     </style>
 </head>
+
 <body>
+     <?php
+      include 'navbar.php';
+     ?>
     <header>
         <h1>Join Our Team</h1>
         <p>Explore Exciting Career Opportunities</p>
     </header>
-
     <section>
         <h2>Current Job Opportunities</h2>
         <div class="job-opportunity">
             <h3>Software Developer</h3>
             <p>We are looking for a talented software developer to join our dynamic team. If you have a passion for coding and innovation, apply now!</p>
-            <button style="border-radius: 5px; background-color: #3498db; padding: 10px;" onclick="redirectToPage2() ">Apply Now!</button>
+            <button style="background-color: #3498db; border-radius: 5px; padding: 10px;" onclick="redirectToPage2()">Apply Now!</button>
 
             <script>
                 function redirectToPage2() {
@@ -219,14 +231,12 @@ section .section-title {
   
   <label for="email">Email:</label><br>
   <input type="email" id="email" name="email" required><br>
-  
-  <label for="subject">Subject:</label><br>
-  <input type="text" id="subject" name="subject" required><br>
-  
+    
   <label for="message">Message:</label><br>
   <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
   
   <input type="submit" value="Submit">
+
 </form>
 
 
