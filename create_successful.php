@@ -9,7 +9,7 @@
 <style>
     body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: lightblue;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +42,7 @@ a:hover {
 <body>
     <div class="container">
         <h1>Create Successful!</h1>
-        <p>Your Email was successfully send out!</p>
+        <p>Your Community was successfully send out!</p>
         <a href="about_careers.php">Go Back to Home</a>
     </div>
     
