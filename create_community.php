@@ -148,6 +148,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 }
 
 ?>
+
 <body style="background-color:lightblue;">
 <h1 style="margin-top:30px;">Create Community</h1>
 	<div class="container" style="margin-top:30px;">
