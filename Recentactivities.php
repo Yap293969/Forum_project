@@ -14,86 +14,16 @@
    
 
 </style>
-    
-<nav class="navbar navbar light-blue" >
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Bluedit</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" style= margin:10px; >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"  style="text-align: center;">
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Popular</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item" style="margin: 5px;">
-                <a class="nav-link" href="#">Advertise</a>
-              </li>
-              <li class="dropdown" style="padding: 8px; margin: 5px;">
-                <a href="#" class="dropbtn">About</a>
-                <div class="dropdown-content">
-                    <a href="#">About Careers</a>
-                    <a href="#">About Forum</a>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default widget">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    <h3 class="panel-title">Recent Activities</h3>
+                    <span class="label label-info">3</span>
                 </div>
-            </li>
-            <li class="nav-item" style="margin: 5px;">
-                <a id="careers-link" class="nav-link" href="#">Careers</a>
-            </li>
-              <i class="material-icons" style="font-size:40px;color:blue; margin-left: 120px;" onclick="performadd()">add</i>
-
-            </ul>
-            
-            <div id="search-container" style="margin-left: 120px;">
-                <input type="text" id="search-input" placeholder="Enter your search">
-                <button id="search-button" onclick="performSearch()">Search</button>
-                <button id="login-button" class="btn btn-primary" onclick="openLoginForm()" style = "margin-left: 200px;">Login</button>
-            </div>
-        
-            <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get the "Careers" link by its id
-        var careersLink = document.getElementById("careers-link");
-
-        // Add a click event listener to the "Careers" link
-        careersLink.addEventListener("click", function () {
-            // Redirect to the "careers.html" page
-            window.location.href = 'careers.html';
-        });
-    });
-               function openLoginForm() {
-                // Redirect to the existing login page
-                window.location.href = 'log_in.html';
-            }
-                function performSearch() {
-                    // Get the search query from the input field
-                    var searchQuery = document.getElementById('search-input').value;
-        
-                    // Redirect to Google with the search query
-                    window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
-                }
-            </script>
-                
-          </div>
-        </div>
-      </nav>
-    </nav>
-<div class="container">
-    <div class="row">
-        <div class="panel panel-default widget">
-            <div class="panel-heading">
-                <span class="glyphicon glyphicon-comment"></span>
-                <h3 class="panel-title">Recent Activities</h3>
-                <span class="label label-info">3</span>
-            </div>
-
-            <body>
             <div class="panel-body">
                 <ul class="list-group">
                     <li class="list-group-item">
