@@ -72,6 +72,7 @@
                 <!--search bar end-->
         <div class = "col-md-12">
 				<!--- Post Form Begins -->
+                <form action="homepage.php" method="post" enctype="multipart/form-data">
                 <section class="card">
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -119,44 +120,29 @@
 		</div>
 	</div>
 	<!-- Optional JavaScript -->
-    <script>
-        function selectOption(option) {
-            document.getElementById('searchInput').value = option;
-        }
-    
-        </script>
-    <!--jquery function and other-->
-    <script>
-         // jQuery script to update the search input when a dropdown item is clicked
-        $(document).ready(function () {
-            $('.dropdown-menu a').on('click', function () {
-                var selectedOption = $(this).text();
-            $('#searchInput').val(selectedOption);
-        });
-    });
+    <script src = "post.js"></script>
+    <?php
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve data from the form
+    $description = $_POST['message'];
 
-    function handleFileSelect(input) {
-        const files = input.files;
+    // Handle uploaded file
+    $file = $_FILES['fileInput'];
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileType = $file['type'];
+    $fileSize = $file['size'];
 
-        // You can now access the selected files in the 'files' array
-        // For example, to display the names of the selected files:
-        for (let i = 0; i < files.length; i++) {
-            console.log(files[i].name);
-        }
+    // Move uploaded file to a desired location (adjust the path accordingly)
+    $uploadPath = 'uploads/' . $fileName;
+    move_uploaded_file($fileTmpName, $uploadPath);
 
-        // You can perform additional actions with the selected files here
-        // For example, if you want to display the selected images or videos:
-        displaySelectedFiles(files);
-    }
+    // Save data to the database or perform other actions as needed
 
-    // Add this function to display the selected files (images or videos)
-    function displaySelectedFiles(files) {
-        // Implement your logic to display selected files, e.g., show thumbnails
-        // You can use FileReader to read file contents and display them
-        // For simplicity, this example just logs file names to the console
-        for (let i = 0; i < files.length; i++) {
-            console.log("Selected File: " + files[i].name);
-        }
-    }
-    </script>
+    // Redirect back to the homepage or any other desired location
+    header('Location: homepage.php');
+    exit();
+}
+?>
 </body>
