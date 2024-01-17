@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!------ Include the above in your HEAD tag ---------->
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile</title>
-  
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-          crossorigin="anonymous">
-          
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-          crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-          crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <script src="path/to/local/fontawesome.js"></script>
+
+  <!-- Bootstrap and Popper.js scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <!-- Other scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   </head>
   <style>
     
@@ -269,7 +270,7 @@ section .section-title {
   <body>
 
   <?php include 'navbar.php' ?>
-  
+
       <div class="container">
         <div class="row">
         <div class="col-md-9">
@@ -306,9 +307,17 @@ section .section-title {
               <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-container">
-                  <div class="profile-userpic">
-                    <img src="forum_project_test_images/profile_picture_test.jpeg" class="img-responsive" alt="Profile Picture">
-                  </div>
+                <div class="profile-userpic" id="profilePicContainer">
+                  <img src="<?php echo getProfilePicture(); ?>" class="img-responsive" alt="Profile Picture">
+                </div>
+
+              <?php
+              // Function to get the profile picture from the session
+              function getProfilePicture() {
+              session_start();
+              return isset($_SESSION['profile_picture']) ? $_SESSION['profile_picture'] : 'forum_project_test_images/default_profile_picture.jpg';
+            }
+            ?>
                   <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
                       Yap Xiang Yang
@@ -319,10 +328,14 @@ section .section-title {
                 <!-- SIDEBAR USER TITLE -->
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
+                
                 <div class="profile-userbuttons">
+                <form method="post" enctype="multipart/form-data">
                   <label for="fileInput" class="btn btn-info btn-lg">Add Profile Picture</label>
                   <input type="file" id="fileInput" style="opacity: 0; position: absolute; top: 0; left: 0;" accept="image/*" onchange="previewImage(this)">
+                </form>
                 </div>
+               
                 <center>
                 <div>
                   <p>Date account created:</p>
@@ -399,31 +412,19 @@ section .section-title {
       <!-- ./Footer -->
       </div>
       </div>
-      <script>
-        function previewImage(input) {
-          var profilePic = document.querySelector('.profile-userpic img');
-          var file = input.files[0];
-      
-          if (file) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-              profilePic.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-          }
-        }
-          document.getElementById('addPostBtn').addEventListener('click', function() {
-          // Navigate to post.html
-          fetch('post.html')
-          .then(response => response.text())
-          .then(html => {
-          // Update the content dynamically
-          document.body.innerHTML = html;
-          // You may want to enhance this by updating specific elements instead of replacing the entire body
-          })
-          .catch(error => console.error('Error fetching post.html:', error));
-  });
-</script>
-      </script>
+      <script src = "profile.js"></script>
+       
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imageData'])) {
+    // Validate and sanitize the image data
+    $imageData = filter_input(INPUT_POST, 'imageData', FILTER_SANITIZE_STRING);
+
+    // Save the image data to the session
+    $_SESSION['profile_picture'] = $imageData;
+}
+?>
+
   </body>
 </html>
