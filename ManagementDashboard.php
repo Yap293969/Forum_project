@@ -23,7 +23,7 @@
     <body>
 
     <?php
-        include '';
+        include 'navbar.php';
     ?>
         <div class="container">
             <div class="table-responsive">
@@ -51,61 +51,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><a href="#"><img src="/examples/images/avatar/1.jpg" class="avatar" alt="Avatar"> Michael Holz</a></td>
-                                <td>04/10/2013</td>                        
-                                <td>Admin</td>
-                                <td><span class="status text-success">&bull;</span> Active</td>
-                                <td>
-                                    <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><a href="#"><img src="/examples/images/avatar/2.jpg" class="avatar" alt="Avatar"> Paula Wilson</a></td>
-                                <td>05/08/2014</td>                       
-                                <td>Publisher</td>
-                                <td><span class="status text-success">&bull;</span> Active</td>
-                                <td>
-                                    <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><a href="#"><img src="/examples/images/avatar/3.jpg" class="avatar" alt="Avatar"> Antonio Moreno</a></td>
-                                <td>11/05/2015</td>
-                                <td>Publisher</td>
-                                <td><span class="status text-danger">&bull;</span> Suspended</td>                        
-                                <td>
-                                    <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                                </td>                        
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><a href="#"><img src="/examples/images/avatar/4.jpg" class="avatar" alt="Avatar"> Mary Saveley</a></td>
-                                <td>06/09/2016</td>
-                                <td>Reviewer</td>
-                                <td><span class="status text-success">&bull;</span> Active</td>
-                                <td>
-                                    <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td><a href="#"><img src="/examples/images/avatar/5.jpg" class="avatar" alt="Avatar"> Martin Sommer</a></td>
-                                <td>12/08/2017</td>                        
-                                <td>Moderator</td>
-                                <td><span class="status text-warning">&bull;</span> Inactive</td>
-                                <td>
-                                    <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                                </td>
-                            </tr>
+                            <?php
+                                // Loop through the members array to generate table rows dynamically
+                                foreach ($members as $member) {
+                                    echo '<tr>';
+                                    echo '<td>' . $member['id'] . '</td>';
+                                    echo '<td><a href="#"><img src="' . $member['avatar'] . '" class="avatar" alt="Avatar">' . $member['name'] . '</a></td>';
+                                    echo '<td>' . $member['date_created'] . '</td>';
+                                    echo '<td>' . $member['role'] . '</td>';
+                                    echo '<td><span class="status text-' . ($member['status'] == 'Active' ? 'success' : 'danger') . '">&bull;</span> ' . $member['status'] . '</td>';
+                                    echo '<td>';
+                                    echo '<a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>';
+                                    echo '<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>';
+                                    echo '</td>';
+                                    echo '</tr>';
+                                }
+                            ?>
                         </tbody>
                     </table>
                     <div class="clearfix">
@@ -114,7 +75,7 @@
                             <li class="page-item disabled"><a href="#">Previous</a></li>
                             <li class="page-item"><a href="#" class="page-link">1</a></li>
                             <li class="page-item"><a href="#" class="page-link">2</a></li>
-                            <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
                             <li class="page-item"><a href="#" class="page-link">4</a></li>
                             <li class="page-item"><a href="#" class="page-link">5</a></li>
                             <li class="page-item"><a href="#" class="page-link">Next</a></li>
@@ -125,7 +86,7 @@
         </div>   
         
         <?php
-        include '';
+        include 'footer.php';
     ?>
     </body>
 </html>
