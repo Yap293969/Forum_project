@@ -71,14 +71,27 @@ class SignUp
     
         // Example SQL query (Note: Use prepared statements to prevent SQL injection)
         $sql = "INSERT INTO sign_up (username, email, password, date_of_birth) VALUES (?, ?, ?, ?)";
+
+        // Insert into log_in table for checking if the username and password are valid or not
+        $loginSql = "INSERT INTO log_in (username, password) VALUES (?, ?)";
     
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssss", $this->username, $this->email, $hashedPassword, $dateOfBirth);
+
+        $loginStmt = $conn->prepare($loginSql);
+        $loginStmt->bind_param("ss", $this->username, $hashedPassword);
     
 
         if ($stmt->execute()) {
             // Display a success message or confirmation
             echo 'Sign up successful! Redirecting to login page...';
+    
+            // Insert login information into log_in table
+            if ($loginStmt->execute()) {
+                echo 'Login information stored successfully!';
+            } else {
+                echo 'Error storing login information: ' . $loginStmt->error;
+            }
     
             // Redirect to login page after a short delay
             header("refresh:3;url=log_in.php");
@@ -136,6 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <head>
