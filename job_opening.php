@@ -109,9 +109,6 @@
          </style>
     </head>
     <body>
-        <?php
-        include 'navbar.php';
-    ?>
         
         <!-- Start feature-cat Area -->
         <section class="feature-cat-area pt-100" id="category">
