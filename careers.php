@@ -235,7 +235,7 @@ section .section-title{
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
       <h1 style="color:blue;">Bluedit</h1>
       <h2 style="text-align:center;">At Bluedit, you’ll help build something that encourages millions around the world to think more, do more, learn more, feel more– and maybe even laugh more.</h2>
-      <a href="job_opening.php" class="btn-about">View More Jobs Oppoturnity</a>
+      <a href="about_careers.php" class="btn-about">View More Jobs Oppoturnity</a>
     </div>
   </section><!-- End Hero -->
 
