@@ -4,102 +4,174 @@
 
     </title>
     <head>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <!------ Include the above in your HEAD tag ---------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="CSS/rules&guidelines.css">
+        
     </head>
-
+    
+<style>
+    .box{
+    background: #c31919 !important;
+    }
+    span{
+    font-size:15px !important;
+    }
+    a{
+    text-decoration:none !important; 
+    color: #ffffff !important;   
+    border-bottom:2px solid #000000 !important;
+    }
+    .box{
+    padding:60px 0px !important;
+    }
+    
+    .box-part{
+    background:#3da72a !important;
+    border-radius:0 !important;
+    padding:60px 10px !important;
+    margin:30px 0px !important;
+    }
+    .text{
+    margin:20px 0px !important;
+    }
+    
+    .fa{
+    color:#471010 ;
+    }
+</style>
     <body>
     <?php
-    include '';
+    include 'navbar.php';
     ?>
 
+<div class="box">
     <div class="container">
-        <div class="row">
-            <div id="sp-component" class="col-sm-12 col-md-12">
-                <div class="sp-column ">
-                </div>
-                <div class="row">
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="/documentation/sp-page-builder/sp-page-builder-2-x">
-                        <img src="//www.joomshaper.com/images/2017/01/27/page-builder.png" alt="SP Page Builder">
-                        </a>
-                        <h2>SP Page Builder</h2>
-                        <div class="documentation-shortdesc">
-                            The complete knowledge base and best crafted guide to SP Page Builder you will ever need. 
-                        </div>
-                        <a class="btn btn-doc-outline" href="/documentation/sp-page-builder/sp-page-builder-2-x">View Documentation</a>
+     	<div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                    
+                    <div class="title">
+                        <h4>Instagram</h4>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="/documentation/joomla-templates/rhino">
-                        <img src="//www.joomshaper.com/images/2017/01/27/template.png" alt="Joomla Templates">
-                        </a>
-                        <h2>Joomla Templates</h2>
-                        <div class="documentation-shortdesc">
-                            Explore our extensive resources to get an in-depth understanding on our Joomla templates. 
-                        </div>
-                        <a class="btn btn-doc-outline" href="/documentation/joomla-templates/rhino">View Documentation</a>
+                    
+                    <div class="text">
+                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="/documentation/joomla-extensions/sp-easyimagegallery">
-                        <img src="//www.joomshaper.com/images/2017/01/27/extensions.png" alt="Joomla Extensions">
-                        </a>
-                        <h2>Joomla Extensions</h2>
-                        <div class="documentation-shortdesc">
-                            Learn ins and outs of our powerful, innovative and world wide used extensions for Joomla.
-                        </div>
-                        <a class="btn btn-doc-outline" href="/documentation/joomla-extensions/sp-easyimagegallery">View Documentation</a>
+                    
+                    <a href="#">Learn More</a>
+                    
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="/documentation/helix-framework/helix3">
-                        <img src="//www.joomshaper.com/images/2017/01/27/helix.png" alt="Helix Framework">
-                        </a>
-                        <h2>Helix Framework</h2>
-                        <div class="documentation-shortdesc">
-                            Learn everything about the Helix Framework. What’s Helix, how to use it and much more. 
-                        </div>
-                        <a class="btn btn-doc-outline" href="/documentation/helix-framework/helix3">View Documentation</a>
+            </div>	 
+            
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+                
+                    <div class="title">
+                        <h4>Twitter</h4>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="https://www.joomshaper.com/faqs">
-                            <img src="//www.joomshaper.com/images/2017/01/27/faq.png" alt="Faqs">
-                        </a>
-                        <h2>Faqs</h2>
-                        <div class="documentation-shortdesc">
-                            A set of ready answers to the most common questions asked by the users and members. 
-                        </div>
-                        <a class="btn btn-doc-outline" href="https://www.joomshaper.com/faqs">View Faqs</a>
+                    
+                    <div class="text">
+                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="documentation-index">
-                        <a href="https://www.joomshaper.com/forums">
-                        <img src="//www.joomshaper.com/images/2017/01/27/forums.png" alt="Forums">
-                        </a>
-                        <h2>Forums</h2>
-                        <div class="documentation-shortdesc">
-                            Share your experience and get solutions to any issue you may face with our products. 
-                        </div>
-                        <a class="btn btn-doc-outline" href="https://www.joomshaper.com/forums">Access Forums</a>
+                    
+                    <a href="#">Learn More</a>
+                    
                     </div>
+            </div>	 
+            
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+                    
+                    <div class="title">
+                        <h4>Facebook</h4>
+                    </div>
+                    
+                    <div class="text">
+                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                    </div>
+                    
+                    <a href="#">Learn More</a>
+                    
+                    </div>
+            </div>	 
+            
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-pinterest-p fa-3x" aria-hidden="true"></i>
+                    
+                    <div class="title">
+                        <h4>Pinterest</h4>
+                    </div>
+                    
+                    <div class="text">
+                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                    </div>
+                    
+                    <a href="#">Learn More</a>
+                    
+                    </div>
+            </div>	 
+            
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
+                
+                    <div class="title">
+                        <h4>Google</h4>
+                    </div>
+                    
+                    <div class="text">
+                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                    </div>
+                    
+                    <a href="#">Learn More</a>
+                    
+                    </div>
+            </div>	 
+            
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            
+                <div class="box-part text-center">
+                    
+                    <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                    
+                <div class="title">
+                    <h4>Github</h4>
                 </div>
-            </div>
-        </div>
+                
+                <div class="text">
+                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                </div>
+                
+                <a href="#">Learn More</a>
+                
+                </div>
+            </div>		
+		</div>		
     </div>
+</div>
+    
 
     <?php
-        include '';
+        include 'footer.php';
     ?>
     </body>
 </html>
