@@ -218,7 +218,7 @@
                     <a href="#">Service 3</a>
                 </div>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="press.php">Press</a></li>
   </ul>
   <button id="closeDrawerButton" class="close-button">Close</button>
 </div>

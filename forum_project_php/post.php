@@ -84,21 +84,21 @@
                     <div class="card-body">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                <div class="form-group">
-                                    <label for="fileInput">Picture & Video</label>
-                                    <input type="file" class="form-control-file" accept="image/*, video/*" id="fileInput" onchange="handleFileSelect(this)">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="Description"></textarea>
-                                </div>
-
+                            <div class="form-group">
+                                <label for="fileInput">Picture & Video</label>
+                                <input type="file" class="form-control-file" accept="image/*, video/*" name="fileInput" id="fileInput">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="message">post</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Description"></textarea>
+                            </div>
                             </div>
                         </div>
                         <div class="text-right">                      
                         	<button type="submit" class="btn btn-primary">Post</button>
                         </div>
                     </div>
+    </form>
                 </section>
                 <!--- Post Form Ends -->
 			</div>
@@ -119,30 +119,4 @@
             </div>
 		</div>
 	</div>
-	<!-- Optional JavaScript -->
-    <script src = "post.js"></script>
-    <?php
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve data from the form
-    $description = $_POST['message'];
-
-    // Handle uploaded file
-    $file = $_FILES['fileInput'];
-    $fileName = $file['name'];
-    $fileTmpName = $file['tmp_name'];
-    $fileType = $file['type'];
-    $fileSize = $file['size'];
-
-    // Move uploaded file to a desired location (adjust the path accordingly)
-    $uploadPath = 'uploads/' . $fileName;
-    move_uploaded_file($fileTmpName, $uploadPath);
-
-    // Save data to the database or perform other actions as needed
-
-    // Redirect back to the homepage or any other desired location
-    header('Location: homepage.php');
-    exit();
-}
-?>
 </body>
