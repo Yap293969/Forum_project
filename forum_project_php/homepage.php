@@ -150,6 +150,27 @@
  <div class="container-fluid gedf-wrapper" style="margin-top:5px;">
         <div class="row">
             <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                    <img src="path/to/profile_picture.jpg" alt="Profile Picture" class="img-fluid profile-picture" onclick="window.location.href='profile.php'">
+                        <div class="h5">Profile</div>
+                        <div class="h7 text-muted">Fullname : TEE GAI YU</div>
+                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Python, Java, and
+                            etc.
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="h6 text-muted">Followers</div>
+                            <div class="h5">89 peoples</div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="h6 text-muted">Following</div>
+                            <div class="h5">6758 peoples</div>
+                        </li>
+                        <li class="list-group-item">More details......</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="col-md-6 gedf-main">
