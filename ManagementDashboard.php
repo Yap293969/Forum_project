@@ -24,6 +24,10 @@
 
     <?php
         include 'navbar.php';
+
+        include 'managementdashboard.php';
+
+        $member = getMembers();
     ?>
         <div class="container">
             <div class="table-responsive">
@@ -55,11 +59,10 @@
                                 // Loop through the members array to generate table rows dynamically
                                 foreach ($members as $member) {
                                     echo '<tr>';
-                                    echo '<td>' . $member['id'] . '</td>';
-                                    echo '<td><a href="#"><img src="' . $member['avatar'] . '" class="avatar" alt="Avatar">' . $member['name'] . '</a></td>';
-                                    echo '<td>' . $member['date_created'] . '</td>';
-                                    echo '<td>' . $member['role'] . '</td>';
-                                    echo '<td><span class="status text-' . ($member['status'] == 'Active' ? 'success' : 'danger') . '">&bull;</span> ' . $member['status'] . '</td>';
+                                    echo '<td>' . $member['username'] . '</td>'; 
+                                    echo '<td><a href="#"><img src="' . $member['member_position'] . '" class="avatar" alt="Avatar">' . $member['name'] . '</a></td>';
+                                    echo '<td>' . $member['member_joined_date'] . '</td>';
+                                    echo '<td>' . $member['member_role'] . '</td>';
                                     echo '<td>';
                                     echo '<a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>';
                                     echo '<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>';
