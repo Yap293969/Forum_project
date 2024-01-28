@@ -1,3 +1,36 @@
+<?php
+$uploadFolder = "uploads/"; // Specify the folder where you want to store uploaded profile pictures
+
+if (isset($_FILES["profilePicture"]) && $_FILES["profilePicture"]["error"] == UPLOAD_ERR_OK) {
+    $tmp_name = $_FILES["profilePicture"]["tmp_name"];
+    if (isset($_FILES["profilePicture"]["name"])) {
+        $profilePictureFilename = basename($_FILES["profilePicture"]["name"]);
+        $destination = $uploadFolder . $profilePictureFilename;
+
+        if (move_uploaded_file($tmp_name, $destination)) {
+            // File upload successful
+            // Update the profile picture path in your database or user data
+            // For example: $userId = $_SESSION["user_id"]; updateProfilePicturePath($userId, $destination);
+            echo "Profile picture uploaded successfully.";
+        } else {
+            echo "Error uploading profile picture.";
+        }
+    }
+} else {
+    // Handle the case when no file is uploaded or there's an issue
+    echo "Error: File not uploaded or invalid file.";
+}
+?>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- ... (rest of your head section) ... -->
+</head>
+<body>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -274,33 +307,7 @@ section .section-title {
       <div class="container">
         <div class="row">
         <div class="col-md-9">
-            <div class="profile-content">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container" style="max-width: 800px;">
-                  <nav class="navbar navbar blue" style="background-color: white;">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 50px; background-color:white; align-items: center;" >
-                      <div class="container-fluid" style="margin-left: 200px;">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 10px;">
-                          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="text-align: center;">
-                            <li class="nav-item" style="margin: 5px;">
-                              <a class="nav-link" href="#" style="color: black;">New</a>
-                            </li>
-                            <li class="nav-item" style="margin: 5px;">
-                              <a class="nav-link" href="#" style="color: black;">Hot</a>
-                            </li>
-                            <li class="nav-item" style="margin: 5px;">
-                              <a class="nav-link" href="#" style="color: black;">Top</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </nav>
-                  </nav>
-                </div>
-              </nav>              
+            <div class="profile-content">           
                 </div>  
               </div>
               <div class = "col-md-3">
@@ -308,16 +315,8 @@ section .section-title {
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-container">
                 <div class="profile-userpic" id="profilePicContainer">
-                  <img src="<?php echo getProfilePicture(); ?>" class="img-responsive" alt="Profile Picture">
+                <img src="<?php echo isset($profilePicturePath) ? $profilePicturePath : 'default_image.jpg'; ?>" class="img-responsive" alt="Profile Picture">
                 </div>
-
-              <?php
-              // Function to get the profile picture from the session
-              function getProfilePicture() {
-              session_start();
-              return isset($_SESSION['profile_picture']) ? $_SESSION['profile_picture'] : 'forum_project_test_images/default_profile_picture.jpg';
-            }
-            ?>
                   <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
                       Yap Xiang Yang
@@ -330,9 +329,9 @@ section .section-title {
                 <!-- SIDEBAR BUTTONS -->
                 
                 <div class="profile-userbuttons">
-                <form method="post" enctype="multipart/form-data">
-                  <label for="fileInput" class="btn btn-info btn-lg">Add Profile Picture</label>
-                  <input type="file" id="fileInput" style="opacity: 0; position: absolute; top: 0; left: 0;" accept="image/*" onchange="previewImage(this)">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <label for="profilePicture">Upload Profile Picture:</label>
+                    <input type="file" name="profilePicture" id="profilePicture" accept="image/*">
                 </form>
                 </div>
                
@@ -412,19 +411,5 @@ section .section-title {
       <!-- ./Footer -->
       </div>
       </div>
-      <script src = "profile.js"></script>
-       
-<?php
-session_start();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imageData'])) {
-    // Validate and sanitize the image data
-    $imageData = filter_input(INPUT_POST, 'imageData', FILTER_SANITIZE_STRING);
-
-    // Save the image data to the session
-    $_SESSION['profile_picture'] = $imageData;
-}
-?>
-
   </body>
 </html>
