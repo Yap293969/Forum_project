@@ -197,6 +197,7 @@
 
 <div class="navbar" style="background-color: lightblue;">
   <h1>Bluedit</h1>
+  <a href = "post.php" class="btn btn-success">Post</a>
   <button id="openDrawerButton" class="menu-button">
   <span class="bar"></span>
   <span class="bar"></span>
