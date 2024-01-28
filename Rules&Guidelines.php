@@ -15,8 +15,9 @@
     </head>
     
 <style>
-    .box{
-    background: #c31919 !important;
+    
+.box{
+    background: #ffffff !important;
     }
     span{
     font-size:15px !important;
@@ -31,7 +32,7 @@
     }
     
     .box-part{
-    background:#3da72a !important;
+    background:#3d4ae2 !important;
     border-radius:0 !important;
     padding:60px 10px !important;
     margin:30px 0px !important;
@@ -41,8 +42,9 @@
     }
     
     .fa{
-    color:#471010 ;
+    color:#b9dffb ;
     }
+
 </style>
     <body>
     <?php
@@ -56,14 +58,12 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-                    
                     <div class="title">
-                        <h4>Instagram</h4>
+                        <h4>About Post</h4>
                     </div>
                     
                     <div class="text">
-                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        <span>All rules about posting</span>
                     </div>
                     
                     <a href="#">Learn More</a>
@@ -75,14 +75,13 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
                 
                     <div class="title">
-                        <h4>Twitter</h4>
+                        <h4>Joining Communities</h4>
                     </div>
                     
                     <div class="text">
-                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        <span>Joining communities rules and regulations</span>
                     </div>
                     
                     <a href="#">Learn More</a>
@@ -94,14 +93,13 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
                     
                     <div class="title">
-                        <h4>Facebook</h4>
+                        <h4>Like, Shares & Comments</h4>
                     </div>
                     
                     <div class="text">
-                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        <span>Rules about like, shares & comments</span>
                     </div>
                     
                     <a href="#">Learn More</a>
@@ -113,14 +111,13 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-pinterest-p fa-3x" aria-hidden="true"></i>
                     
                     <div class="title">
-                        <h4>Pinterest</h4>
+                        <h4>Create Communities</h4>
                     </div>
                     
                     <div class="text">
-                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        <span>Steps and Rules for communties host</span>
                     </div>
                     
                     <a href="#">Learn More</a>
@@ -132,14 +129,13 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
                 
                     <div class="title">
-                        <h4>Google</h4>
+                        <h4>Link Account</h4>
                     </div>
                     
                     <div class="text">
-                        <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                        <span>Link other social media account</span>
                     </div>
                     
                     <a href="#">Learn More</a>
@@ -151,14 +147,13 @@
             
                 <div class="box-part text-center">
                     
-                    <i class="fa fa-github fa-3x" aria-hidden="true"></i>
                     
                 <div class="title">
-                    <h4>Github</h4>
+                    <h4>Upload Content</h4>
                 </div>
                 
                 <div class="text">
-                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                    <span>Content Restriction</span>
                 </div>
                 
                 <a href="#">Learn More</a>
