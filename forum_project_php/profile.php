@@ -340,7 +340,7 @@ section .section-title {
                   <p>Date account created:</p>
                 </div>
                 <div>
-                  <button type = "button" class = "btn btn-success"  id="addPostBtn">Add new post</button>
+                <a href="post.php" class="btn btn-success">Add new post</a>
                 </div>
               </center>
                 <!-- END SIDEBAR BUTTONS -->
