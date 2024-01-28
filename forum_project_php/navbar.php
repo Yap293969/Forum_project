@@ -208,12 +208,12 @@
 <div id="myDrawer" class="drawer">
   <h2 style="margin-left: 60px; margin-top:20px;">Bluedit</h2>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="homepage.php">Home</a></li>
+    <li><a href="about_forum.php">About</a></li>
     <li class="dropdown">
                 <a href="#">Services &#9662;</a>
                 <div class="dropdown-content">
-                    <a href="#">Service 1</a>
+                    <a href="careers.php">Careers</a>
                     <a href="#">Service 2</a>
                     <a href="#">Service 3</a>
                 </div>
